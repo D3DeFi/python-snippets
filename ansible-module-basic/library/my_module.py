@@ -1,19 +1,15 @@
 #!/usr/bin/python
 
-
 import os
 from ansible.module_utils.basic import *
 
-
 def create_test_file(name, content):
-    with open('/tmp/' + name, 'w') as f:
+    with open(name, 'w') as f:
         f.write(content)
 
-
 def delete_test_file(name):
-    if os.path.exists('/tmp/' + name):
-        os.remove('/tmp/' + name)
-
+    if os.path.exists(name):
+        os.remove(name)
 
 if __name__ == '__main__':
     module = AnsibleModule(
