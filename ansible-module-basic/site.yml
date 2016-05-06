@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: run my test module
+      my_module: name=test123 state=present content='testing 1234'
+      tags: create
+
+    - name: run my test module (2nd run)
+      my_module: name=test123 state=absent
+      tags: delete
