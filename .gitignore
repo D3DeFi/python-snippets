@@ -1,3 +1,4 @@
-env
-*.pyc
+env/
 *.swp
+*.pyc
+__pycache__/
